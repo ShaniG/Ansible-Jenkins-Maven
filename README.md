@@ -20,7 +20,18 @@ No requirements.
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+    --- 
+    hostname: localhost  
+    jenkins_jar_location: /opt/jenkins-cli.jar #Location you store the jenkins jar
+    jenkins_plugins: # Jenkins plugins found on: https://wiki.jenkins-ci.org/display/JENKINS/Plugins
+        - git
+        - sonar
+        - ssh
+    jenkins_maven_job_name: mavengit #name of the jenkinsjob
+    jenkins_git_url: https://github.com/ShaniG/integrationtest.git #github url
+    #jenkins_git_url: git@github.com:ShaniG/integrationtest.git # SSH git URL
+    #jenkins_ssh_key: public sshkey (common: id_rsa.pub ) 
+    #jenkins_private_ssh_key: private sshkey (common: id_rsa ) 
 
 Dependencies
 ------------
