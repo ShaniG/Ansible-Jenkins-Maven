@@ -10,7 +10,7 @@ SSH requires an additional setting on your job configuration (jenkins dashboard)
 * Under private key select: "From the Jenkins master ~/.ssh"
 * Click on 'Add'
 * Select 'jenkins' as credentials and now SSH works !
-    
+! Make sure your github repository got the public SSH key as deploy key !
 
 Requirements
 ------------
