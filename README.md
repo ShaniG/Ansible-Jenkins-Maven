@@ -1,12 +1,21 @@
-Role Name
+Jenkins-Maven
 =========
 
-A brief description of the role goes here.
+This is an ansible role to create a CI server Jenkins. This role includes automatic job creation for Maven linked to your own Github repository (https). There is also a commented section for SSH connection with your Github Repository.
+
+SSH requires an additional setting on your job configuration (jenkins dashboard):
+* Go to configuration of the job.
+* Click 'Add' credentials below Github url.
+* Choose for Kind: SSH Username with private key
+* Under private key select: "From the Jenkins master ~/.ssh"
+* Click on 'Add'
+* Select 'jenkins' as credentials and now SSH works !
+    
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+No requirements.
 
 Role Variables
 --------------
@@ -16,7 +25,7 @@ A description of the settable variables for this role should go here, including 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No dependencies.
 
 Example Playbook
 ----------------
@@ -30,9 +39,10 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+BSD, MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+- ShaniG (Based on: https://github.com/geerlingguy/ansible-role-jenkins)
+ 
