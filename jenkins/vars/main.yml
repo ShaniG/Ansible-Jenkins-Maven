@@ -1,2 +1,12 @@
 ---
-# vars file for jenkins
+hostname: localhost
+jenkins_jar_location: /opt/jenkins-cli.jar
+jenkins_plugins:
+  - git
+  - sonar
+  - ssh
+jenkins_maven_job_name: mavengit
+jenkins_git_url: https://github.com/yourown/repository.git
+#jenkins_git_url: git@github.com:yourown/repository.git
+#jenkins_ssh_key: 'public sshkey'
+#jenkins_private_ssh_key: 'private sshkey'
